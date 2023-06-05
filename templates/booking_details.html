@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add any necessary CSS styles or external stylesheets here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        h2 {
+            color: #666666;
+        }
+
+        p {
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <h1>Booking Details</h1>
+    <h2>Client Information</h2>
+    <p>Name: {{ client.name }}</p>
+    <p>Email: {{ client.email }}</p>
+    <p>Check-in Date: {{ client.checkin_date.strftime('%Y-%m-%d') }}</p>
+    <p>Check-out Date: {{ client.checkout_date.strftime('%Y-%m-%d') }}</p>
+
+    <h2>Room Details</h2>
+    <p>Room Number: {{ client.assigned_room.number }}</p>
+    <p>Room Type: {{ client.assigned_room.room_type }}</p>
+    <p>Price per Night: {{ client.assigned_room.price }} D.A</p>
+
+    <h2>Total Price</h2>
+    <p>Total Price: {{ total_price }} D.A</p>
+</body>
+</html>

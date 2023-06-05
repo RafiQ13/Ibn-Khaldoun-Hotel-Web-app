@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <meta charset="utf-8">
+        <title>IBN KHALDOUN HOTEL</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="..\static\css\static.css">
+        <link rel = "icon" href = "../static/images/logo.png" type = "image/png"-->
+        <link rel="stylesheet"  type="text/css" href="{{url_for('.static', filename='css/static.css')}}">
+    </head>
+    <body>
+        
+        <!-- header -->
+        <header class = "header" id = "header">
+            <div class = "head-top">
+                <div class = "site-name">
+                    <span>IBN KHALDOUN</span>
+                </div>
+                <div class = "site-nav">
+                    <span id = "nav-btn">MENU <i class = "fas fa-bars"></i></span>
+                </div>
+            </div>
+
+            <div class = "head-bottom flex">
+                <h2>IBN KHALDOUN HOTEL</h2>
+                <p>Welcome to IBN KHALDOUN HOTEL, one of the most confortable places to stay in while visition the city of TIARET and exploring all of the amazing places found in there and watching the historical monuments marking the area.</p>
+                <a><button onclick="scrollToDiv()" type = "button" class = "head-btn">GET STARTED</button></a>
+            </div>
+        </header>
+        <!-- end of header -->
+
+        <!-- side navbar -->
+        <div class = "sidenav" id = "sidenav">
+            <span class = "cancel-btn" id = "cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+
+            <ul class = "navbar">
+                <li><a href = "#header">home</a></li>
+                <li><a href = "#services">services</a></li>
+                <li><a href = "#rooms">rooms</a></li>
+                <li><a href = "#customers">customers</a></li>
+            </ul>
+            <button onclick="redirectToadmin()" id="login" class = "btn log-in">Admin panel</button>
+        </div>
+        <!-- end of side navbar -->
+
+        <!-- fullscreen modal -->
+        <div id = "modal"></div>
+        <!-- end of fullscreen modal -->
+
+        <!-- body content  -->
+        <section class = "services sec-width" id = "services">
+            <div class = "title">
+                <h1>services</h1>
+            </div>
+            <div class = "services-container">
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-utensils"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Restaurent</h2>
+                        <p>The hotel restaurant offers a wide range of culinary delights using fresh ingredients and providing impeccable service. With a comfortable and inviting atmosphere, it's the perfect place for a leisurely meal or special occasion. The restaurant serves breakfast to dinner, making it an ideal dining experience for hotel guests and local residents!</p>
+                        <button type = "button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-swimming-pool"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Cafeteria</h2>
+                        <p> Our cafeteria is a cozy spot that serves delicious coffee and tea beverages, as well as an assortment of pastries and snacks. With a welcoming atmosphere and friendly staff, it's the perfect place to relax and indulge in a hot beverage and a tasty treat.!</p>
+                        <button type = "button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-broom"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Housekeeping</h2>
+                        <p>Our housekeeping service guarantees that all guest rooms, public areas, and back-of-house areas are thoroughly cleaned to the highest standards of cleanliness and hygiene. We are available 24/7 to ensure prompt and efficient service, and we prioritize addressing guest requests and complaints to ensure their complete satisfaction.!</p>
+                        <button type = "button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-door-closed"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Room Security</h2>
+                        <p>Our hotel prioritizes the safety and security of its guests, equipping each room with a secure locking system and providing 24-hour surveillance and security personnel. Guests can rest easy knowing that their safety is taken seriously and that staff is available to address any concerns.!</p>
+                        <button type = "button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+            </div>
+        </section>
+
+        
+
+        <section class = "rooms sec-width" id = "rooms">
+            <div class = "title">
+                <h1>rooms</h1>
+            </div>
+            <div class = "rooms-container">
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "../static/images/onebed.jpg" alt = "room image" class="image-resize">
+                    </div>
+                    <div class = "room-text">
+                        <h2>One-bedroom Room</h2>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <h4>Bedroom with a queen-sized bed.</h4>
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <h4>Fully equipped.</h4>
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <h4>Designed for a comfortable and relaxing stay.</h4>
+                            </li>
+                        </ul>
+                        <p>"Our one-bedroom hotel room is designed to provide a comfortable and relaxing stay for our guests. The room features a separate bedroom with a queen-sized bed to ensure a restful night's sleep.</p>
+                        <p>You will find a comfortable sofa and armchair for relaxing, as well as a flat-screen TV.</p>
+                        <p>The room also features a dining table and chairs for enjoying meals or working, and a mini-fridge, microwave, sink, and coffee maker so guests can easily prepare light meals and snacks. The room also has a private bathroom.</p>
+                        <p class = "rate">
+                            <span>2000.00 DA/</span> Per Night
+                        </p>
+                        <button type = "button" class = "btn booknow" id="book1">book now</button>
+                    </div>
+                </article>
+                <!-- end of single room -->
+                <!-- Family room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "../static/images/Family.jpg" alt = "room image" class="image-resize">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Family Room</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <h4>Multiple beds and seating areas.</h4>
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <h4>Equipped with modern amenities.</h4>
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <h4>Offers ample space for relaxation and entertainment.</h4>
+                            </li>
+                        </ul>
+                        <p>Our hotel's family room is the ideal choice for families seeking a comfortable and spacious place to stay.</p>
+                        <p>Featuring multiple beds and seating areas, the room is designed to provide ample space for relaxation and entertainment, making it perfect for extended stays.</p>
+                        <p>Whether you're traveling with children or other family members, everyone can be accommodated comfortably.</p>
+                        <p>With modern amenities such as air conditioning, free Wi-Fi, and a flat-screen TV.</p>
+                        <p class = "rate">
+                            <span>3500.00 DA/</span> Per Night
+                        </p>
+                        <button type = "button" class = "btn booknow" id="btn2">book now</button>
+                    </div>
+                </article>
+                <!-- end of Family room -->
+                <!-- Suit  -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "../static/images/Suite.jpg" alt = "room image" class="image-resize">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Suite</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <h4>Experience luxury like never before at our  suite</h4>
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <h4>Indulge in unparalleled comfort and style at our suite</h4>
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <h4>Escape to a heaven of tranquility/sophistication at our suite</h4>
+                            </li>
+                        </ul>
+                        <p>Experience the ultimate in luxury and comfort at our exquisite suite.</p>
+                        <p>Our top-rated accommodation boasts exceptional amenities and unparalleled service, promising a memorable stay.</p>
+                        <p>Unwind in our haven of tranquility and sophistication, and indulge in a world-class experience unlike any other.</p>
+                        <p>Book your stay now and discover the perfect retreat for your next getaway.</p>
+                        <p class = "rate">
+                            <span>5000.00 DA/</span> Per Night
+                        </p>
+                        <button type = "button" class = "btn booknow" id="btn3">book now</button>
+                    </div>
+                </article>
+                <!-- end of suit -->
+            </div>
+        </section>
+        
+        <section class = "customers" id = "customers">
+            <div class = "sec-width">
+                <div class = "title">
+                    <h1>customers</h1>
+                </div>
+                <div class = "customers-container">
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>We Loved it</h3>
+                        <p>"We recently stayed at this hotel and was blown away by the exceptional service. From the moment we checked in, the staff made us feel welcomed and comfortable. The room was spacious and beautifully decorated. We would highly recommend this hotel to anyone looking for a truly exceptional experience."</p>
+                        <img src = "../static/images/cus1.jpg" alt = "customer image">
+                        <span>Yacine, Tunisia</span>
+                    </div>
+                    <!-- end of single customer -->
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>Comfortable Living</h3>
+                        <p>I had the pleasure of staying at this hotel for a business conference and was thoroughly impressed with every aspect of my stay. Food options were delicious and varied, catering to all dietary needs. The rooms were clean and comfortable, with all the amenities I needed to work and relax.</p>
+                        <img src = "../static/images/cus2.jpg" alt = "customer image">
+                        <span>Anissa, Algeria</span>
+                    </div>
+                    <!-- end of single customer -->
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>Nice Place</h3>
+                        <p>The hotel's location was ideal, with stunning views of the surrounding area and easy access to nearby activities. The staff were friendly and attentive,the rooms were spacious and comfortable, with plenty of space for our family of four, providing a great place to relax and enjoy the beautiful weather.</p>
+                        <img src = "../static/images/cus3.jpg" alt = "customer image">
+                        <span>Amine, Egypt</span>
+                    </div>
+                    <!-- end of single customer -->
+                </div>
+            </div>
+        </section>
+        <!-- end of body content -->
+        
+        <!-- footer -->
+        <footer class = "footer">
+            <div class = "footer-container">
+                <div>
+                    <h2>About Us </h2>
+                    <p>a group of students trying to create a hypothetical website for a hotel, we hope you like our humble work!</p>
+                    <ul class = "social-icons">
+                        <li class = "flex">
+                            <i class = "fa fa-twitter fa-2x"></i>
+                        </li>
+                        <li class = "flex">
+                            <i class = "fa fa-facebook fa-2x"></i>
+                        </li>
+                        <li class = "flex">
+                            <i class = "fa fa-instagram fa-2x"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Privacy</h2>
+                    <a href = "www.facebbok.com">Facebook</a>
+                    <a href = "www.instagram.com">Instagram</a>
+                    <a href = "www.twitter.com">Twitter</a>
+                    
+                </div>
+
+                
+
+                <div>
+                    <h2>Have A Question</h2>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                        </span>
+                        <span>
+                            26 Belhouari Street, Tiaret, ALGERIA
+                        </span>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span>
+                            +(213) 06-60-36-42-54
+                        </span>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span>
+                            Contact@IbnKhaldoun.dz
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+        
+        <script src="..\static\js\script.js"></script>
+        <script type="text/javascript" src="{{url_for('.static', filename='js/script.js')}}"></script>
+    </body>
+</html>

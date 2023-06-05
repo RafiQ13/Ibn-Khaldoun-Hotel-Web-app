@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Page</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .form-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-holder {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .form-items {
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .form-select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .form-button {
+      text-align: center;
+    }
+
+    .btn {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .flash-messages {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .flash-message {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #f5c6cb;
+      border-radius: 4px;
+    }
+    label {
+  display: block;
+  margin-bottom: 8px;
+  color: #777;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-input input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-input input[type="date"]::-webkit-inner-spin-button,
+.form-input input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-input input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #777;
+  opacity: 1;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="form-body">
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items">
+          <h3>BOOK Today!</h3>
+          <p>Fill in the data below.</p>
+          <form class="requires-validation" method="post" action="">
+            <div class="col-md-12">
+              <label>Full Name :</label>
+              <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+            </div>
+            <br>
+            <div class="col-md-12">
+              <label>Email :</label>
+              <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+            </div>
+            <br>
+            <div class="col-md-12">
+              <label for="Room_Type">Room Type:</label>
+              <select id="Room_Type" class="form-select mt-3" name="room_type" required>
+                <option selected disabled value="">Select a room type</option>
+                <option value="OneBedroom">One Bed-room</option>
+                <option value="FamilyRoom">Family room</option>
+                <option value="Suite">Suite</option>
+              </select>
+            </div>
+            <br>
+            <label for="checkin">Check In Date:</label>
+            <div class="form-input">
+            <input type="date" id="checkin" name="checkin" placeholder="Check In Date" required>
+            </div>
+
+            <label for="checkout">Check Out Date:</label>
+            <div class="form-input">
+            <input type="date" id="checkout" name="checkout" placeholder="Check Out Date" required>
+            </div>
+            <br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class="flash-messages">
+              {% for message in messages %}
+              <li class="flash-message error">{{ message }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+            <div class="form-button mt-3">
+              <button id="submit" type="submit" class="btn btn-primary">BOOK</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
